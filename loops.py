@@ -1,18 +1,39 @@
 def index_of_by_index(word, list, index):
-    return -1
-
+    if not word in list[index+1:]: return -1
+    for i, e in enumerate(list[index+1:]):
+        if e == word:
+            break
+    return len(list[:index+1]) + i
 
 def index_of_empty(list):
-    return -1
+    if not '' in list: return -1
+    for i, e in enumerate(list):
+        if e == '':
+            break
+    return i
 
 
 def index_of(word, list):
-    return -1
+    if not word in list: return -1
+    for i, e in enumerate(list):
+        if e == word:
+            break
+    return i
 
 
 def put(word, list):
-    return -1
+    if not '' in list: return -1
+    for i, e in enumerate(list):
+        if e == '':
+            break
+    list[i] = word
+    return i
 
 
 def remove(word, list):
-    return -1
+    if not word in list: return 0
+    count = 0
+    for i, e in enumerate(list):
+        if e == word:
+            list[i], count = "", count +1
+    return count

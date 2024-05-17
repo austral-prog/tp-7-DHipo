@@ -1,6 +1,16 @@
 def enumerate_list(list):
-    return list
+    result = []
+    for e in list:
+        if not e: continue
+        result += [f'{len(result)}. {e}']
+    
+    return result
 
 
 def enumerate_backwards(list):
-    return list
+    result = []
+    for e in list:
+        if not e: continue
+        result += [f'{len(result)}. {e[::-1]}']
+    
+    return result
