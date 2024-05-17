@@ -1,9 +1,9 @@
 def index_of_by_index(word, list, index):
-    if not word in list[index+1:]: return -1
-    for i, e in enumerate(list[index+1:]):
+    if not word in list[index:]: return -1
+    for i, e in enumerate(list[index:]):
         if e == word:
             break
-    return len(list[:index+1]) + i
+    return len(list[:index]) + i
 
 def index_of_empty(list):
     if not '' in list: return -1
